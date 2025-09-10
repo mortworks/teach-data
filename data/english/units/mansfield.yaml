@@ -1,0 +1,47 @@
+lessons:
+  - &lesson_schema
+    # ----- schema defaults -----
+    id: ""                # e.g. english:mansfield:bliss-opening
+    title: ""
+    status: draft         # draft | ready
+    date: 1970-01-01
+    lastmod: 1970-01-01
+    image: { url: "", alt: "" }
+    intro: { reading: "", discussion: "" }
+    context_refs: []      # keys into english/shared/context.yaml
+    questions:
+      general: []
+      targeted: []        # [{ref: "...", items: ["...", ...]}, ...]
+      extension: []
+    vocab_use: []         # keys into english/shared/vocab.yaml
+    vocab_extra: []       # free text terms
+    further_context: []   # free list
+
+  # ----- actual lessons -----
+  - <<: *lesson_schema
+    id: english:mansfield:bliss-opening
+    title: "Bliss — opening moves"
+    status: ready
+    date: 2025-07-21
+    lastmod: 2025-07-23
+    image:
+      url: "https://upload.wikimedia.org/wikipedia/commons/c/c6/Renoir_1880_Madame_Renoir_with_a_Dog.jpg"
+      alt: "Renoir, Madame Renoir with a Dog (1880)"
+    intro:
+      reading: "pp.1–2"
+      discussion: |
+        Quick warm-up:
+        – What do the first lines foreground?
+        – Tempo & tone?
+    context_refs: [mansfield-bio, modernism-gesture]
+    questions:
+      general:
+        - "What does ‘bliss’ seem to mean to Bertha?"
+      targeted:
+        - ref: "pp.1–2"
+          items:
+            - "Pick three verbs that do most character work."
+      extension:
+        - "Compare the opening tempo to ‘The Garden Party’."
+    vocab_use: [modernism-core, narration-fp]
+    vocab_extra: ["Prolepsis"]
