@@ -1,0 +1,35 @@
+---
+title: "Pizza Party Planner"
+slug: "pizza-party"
+difficulty: "easy"
+topic: "calculations"
+tags: ["division", "input-output"]
+
+stage1_code: |
+  guests = int(input("How many guests are coming to the party? "))
+  pizzas = (guests + 3) // 4
+  print("You will need", pizzas, "pizzas.")
+
+stage2_code: |
+  def pizzas_needed(guests):
+      return (guests + 3) // 4
+
+tests: |
+  assert pizzas_needed(7) == 2
+  assert pizzas_needed(12) == 3
+  assert pizzas_needed(1) == 1
+  print("✅ All tests passed!")
+
+hints:
+  - "Remember: (guests + 3) // 4 rounds up to the next pizza."
+extensions:
+  - "Change it so each pizza serves 3 guests instead."
+  - "Ask how many slices each person eats, then calculate pizzas (8 slices per pizza)."
+solution: |
+  def pizzas_needed(guests):
+      return (guests + 3) // 4
+---
+## Instructions
+You’re planning a party.  
+Each pizza feeds **4 guests**.  
+Ask for the number of guests, calculate the pizzas needed (rounding up), and print the result.
